@@ -1,0 +1,14 @@
+{
+  "name": "easybank-landing-page",
+  "version": "1.0.0",
+  "description": "A landing page for Easy Bank",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Reza Asghari",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
