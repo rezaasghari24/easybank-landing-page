@@ -1,0 +1,24 @@
+.features {
+	@include section-padding;
+	background-color: var(--Light-Grayish-Blue);
+
+	&__title {
+		width: 50%;
+		margin-bottom: 5rem;
+	}
+
+	&__boxes {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		grid-gap: 6rem;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		& > :not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}

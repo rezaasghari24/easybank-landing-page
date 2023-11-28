@@ -1,4 +1,15 @@
-.heading-primary {
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
 	font-weight: 400;
 	color: var(--Dark-Blue);
+	line-height: 1.2;
+}
+
+.paragraph {
+	color: var(--Grayish-Blue);
+	font-size: 1.4rem;
+	&__sub {
+		font-size: 1.2rem;
+	}
 }
