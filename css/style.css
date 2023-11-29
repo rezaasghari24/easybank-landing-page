@@ -77,23 +77,28 @@ p {
     flex-direction: column;
     height: 100%; }
   .article__img {
-    border-radius: 1rem 1rem 0 0;
-    width: 100%;
-    height: 18rem; }
+    border-radius: 0.5rem 0.5rem 0 0;
+    aspect-ratio: 2/1.5;
+    object-fit: cover;
+    width: 100%; }
   .article__title-box {
     background-color: var(--White);
     padding: 3rem;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
     height: 100%; }
     .article__title-box > :not(:last-child) {
       margin-bottom: 1rem; }
   .article__writer {
     font-size: 0.9rem; }
-  .article__title:visited, .article__title:link {
-    display: block;
-    font-weight: 400;
-    color: var(--Dark-Blue);
-    line-height: 1.2; }
+  .article__title {
+    transition: color 0.2s; }
+    .article__title:visited, .article__title:link {
+      display: block;
+      font-weight: 400;
+      color: var(--Dark-Blue);
+      line-height: 1.2; }
+    .article__title:hover, .article__title:active {
+      color: var(--Lime-Green); }
   .article__text {
     font-size: 1.2rem; }
 
@@ -108,7 +113,7 @@ p {
     padding-bottom: 0.8rem; }
 
 .btn {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 3rem;
   color: var(--White);
   border: none;
   border-radius: 3rem;
@@ -163,3 +168,41 @@ p {
     display: flex; }
     .nav__links > :not(:last-child) {
       margin-right: 3rem; }
+
+.footer {
+  padding: 4rem 15rem;
+  background-color: var(--Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25vh; }
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(2, 10rem); }
+  .footer__link {
+    transition: color 0.2s; }
+    .footer__link:link, .footer__link:visited {
+      font-size: 1.4rem;
+      color: var(--Grayish-Blue); }
+    .footer__link:hover, .footer__link:active {
+      color: var(--Lime-Green); }
+  .footer__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%; }
+    .footer__btn > :first-child {
+      margin-bottom: 1rem; }
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .social-media > :first-child {
+    margin-bottom: 3rem; }
+  .social-media__box > :not(:last-child) {
+    margin-right: 0.4rem; }
+  .social-media__logo {
+    fill: blue !important; }
+    .social-media__logo:hover {
+      filter: invert(61%) sepia(95%) saturate(394%) hue-rotate(81deg) brightness(94%) contrast(86%); }
