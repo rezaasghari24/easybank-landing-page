@@ -1,38 +1,62 @@
 .header {
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--White);
-
+	z-index: 3;
+	position: relative;
 	&__box {
 		display: flex;
 		align-items: center;
-		overflow: hidden;
 		background-color: var(--Very-Light-Gray);
-		height: 88vh;
+		@include respond(phone) {
+			flex-direction: column-reverse;
+		}
 	}
 
 	&__title {
 		flex: 1 0 50%;
-		padding: 0 15rem;
+		@include section-padding(0rem);
 		display: grid;
 		justify-items: start;
 		grid-row-gap: 2rem;
+		@include respond(phone) {
+			justify-items: center;
+			@include section-padding(4rem);
+		}
 	}
 	&__img-box {
 		flex: 1 0 50%;
-		position: relative;
+		&--below {
+			position: relative;
+			overflow: hidden;
+		}
+		&--upper {
+			position: relative;
+			z-index: 1;
+		}
 	}
 	&__img--below {
 		width: 100%;
-		transform: scale(1.5, 1.5) translate(8.5rem, -3rem);
+		transform: scale(1.5, 1.5) translate(10rem, -3rem);
+		@include respond(phone) {
+			width: 100%;
+			transform: scale(1.8, 1.7) translate(8rem, -14rem);
+		}
 	}
 	&__img--upper {
+		width: 100%;
 		position: absolute;
-		top: 39%;
-		left: 58%;
-		transform: scale(0.8, 0.8) translate(-50%, -50%);
-		z-index: 10;
+		top: 50%;
+		left: 50%;
+		transform: scale(1, 1) translate(-34%, -80%);
+		@include respond(phone) {
+			width: 85%;
+			transform: scale(1, 1) translate(-50%, -109%);
+		}
 	}
+}
+
+.logo {
+	width: 14rem;
 }

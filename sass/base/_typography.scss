@@ -4,11 +4,20 @@
 	font-weight: 400;
 	color: var(--Dark-Blue);
 	line-height: 1.2;
+	text-align: center;
 }
 
+@include respond(tab-port) {
+	.heading-primary {
+		font-size: 3.2rem;
+	}
+}
 .paragraph {
 	font-size: 1.4rem;
 	&__sub {
 		font-size: 1.2rem;
+	}
+	@include respond(phone) {
+		text-align: center;
 	}
 }

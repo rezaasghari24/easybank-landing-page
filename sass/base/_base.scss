@@ -9,12 +9,35 @@
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
+	overflow-x: hidden;
+
+	@include respond(tab-land) {
+		// width < 1200?
+		font-size: 50%; //1 rem = 8px, 8/16 = 50%
+	}
+
+	@include respond(tab-port) {
+		// width < 900?
+		font-size: 43.75%; //1 rem = 7px, 7/16 = 43.75%
+	}
+
+	@include respond(phone) {
+		font-size: 68.75%;
+	}
+
+	@include respond(desktop) {
+		font-size: 68.75%; //1rem = 11, 11/16
+	}
+	@include respond(big-desktop) {
+		font-size: 75%; //1rem = 12, 12/16
+	}
 }
 
 body {
 	font-size: 1.8rem;
 	font-family: 'Public Sans', sans-serif;
 	line-height: 1.7;
+	overflow-x: hidden;
 }
 
 a:link,
@@ -28,4 +51,11 @@ ul {
 
 p {
 	color: var(--Grayish-Blue);
+}
+
+.hidden {
+	display: flex !important;
+	transform: translate3d(-50%, -120%, 0) !important;
+	// transform: translate(-50%, -170%) !important;
+	transition: transform 0.4s ease-in-out;
 }

@@ -1,5 +1,5 @@
 .article {
-	@include section-padding;
+	@include section-padding(8rem);
 	background-color: var(--Very-Light-Gray);
 	& > :first-child {
 		margin-bottom: 4rem;
